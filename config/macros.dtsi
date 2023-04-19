@@ -1,3 +1,15 @@
+macro_win_rt: macro_win_rt{
+compatible = "zmk,behavior-macro";
+label = "macro_win_rt";
+#binding-cells = <0>;
+bindings = <&kp LEFT_ALT>, <&kp LEFT_SHIFT>, <&kp F>;
+};
+macro_win_lft: macro_win_lft{
+compatible = "zmk,behavior-macro";
+label = "macro_win_lft";
+#binding-cells = <0>;
+bindings = <&kp LEFT_ALT>, <&kp LEFT_SHIFT>, <&kp S>;
+};
 macro_next_wind: macro_next_wind{
 compatible = "zmk,behavior-macro";
 label = "macro_next_wind";
