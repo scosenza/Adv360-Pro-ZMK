@@ -1,3 +1,21 @@
+macro_next_wind: macro_next_wind{
+compatible = "zmk,behavior-macro";
+label = "macro_next_wind";
+#binding-cells = <0>;
+bindings = <&kp LEFT_COMMAND>, <&kp SINGLE_QUOTE>;
+};
+macro_dock: macro_dock{
+compatible = "zmk,behavior-macro";
+label = "macro_dock";
+#binding-cells = <0>;
+bindings = <&kp LEFT_CONTROL>, <&kp F3>;
+};
+macro_menu: macro_menu{
+compatible = "zmk,behavior-macro";
+label = "macro_menu";
+#binding-cells = <0>;
+bindings = <&kp LEFT_CONTROL>, <&kp F2>;
+};
 macro_undo: macro_undo{
 compatible = "zmk,behavior-macro";
 label = "macro_undo";
