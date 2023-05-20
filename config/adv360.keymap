@@ -77,11 +77,11 @@
 
         layer_NAV {
             bindings = <
-&kp  &kp             &kp              &kp             &kp  &kp  &kp                                             &kp            &kp             &kp             &kp              &kp          &kp  &kp
-&kp  &kp  &macro_windows    &macro_win_up  &macro_win_max  &kp  &kp                                             &kp    &kp PAGE_UP        &kp HOME    &kp UP_ARROW          &kp END          &kp  &kp
-&kp  &kp  &macro_win_lft  &macro_win_down   &macro_win_rt  &kp  &kp  &kp  &kp  &kp  &kp               &kp  &kp  &kp  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp  &kp
-&kp  &kp             &kp              &kp             &kp  &kp  &kp  &kp  &kp  &kp  &kp       &macro_menu  &kp  &kp    &macro_undo      &macro_cut     &macro_copy     &macro_paste  &macro_redo  &kp
-&kp  &kp             &kp              &kp             &kp       &kp  &kp  &kp            &macro_next_wind  &kp  &kp                            &kp             &kp              &kp          &kp  &kp
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                       &trans         &trans          &trans          &trans           &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                       &trans    &kp PAGE_UP        &kp HOME    &kp UP_ARROW          &kp END  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans  &trans  &trans  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &bootloader  &trans  &trans         &trans          &trans          &trans           &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans                       &trans  &trans  &trans                         &trans          &trans           &trans  &trans  &trans
             >;
         };
     };
