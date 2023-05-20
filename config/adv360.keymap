@@ -37,11 +37,11 @@
 
         default_layer {
             bindings = <
-       &kp EQUAL     &kp N1    &kp N2    &kp N3     &kp N4  &kp N5                      &tog 1                                                                  &mo 3  &kp N6  &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
-         &kp TAB      &kp Q     &kp W     &kp E      &kp R   &kp T                       &none                                                                  &none   &kp Y   &kp U      &kp I     &kp O     &kp P   &kp BSLH
-         &kp ESC    &lt 4 A     &kp S     &kp D      &kp F   &kp G                       &none     &kp LCTRL  &kp LALT  &none  &none   &kp LGUI  &kp RCTRL      &none   &kp H   &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
-       &kp LSHFT      &kp Z     &kp X     &kp C      &kp V   &kp B                       &none         &none  &kp HOME  &none  &none  &kp PG_UP      &none      &none   &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
-&kp LEFT_COMMAND  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &mt LEFT_COMMAND BACKSPACE  &lt 4 DELETE   &kp END                &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT      &mo 2
+       &kp EQUAL     &kp N1    &kp N2    &kp N3     &kp N4  &kp N5         &tog 1                                                                &mo 3  &kp N6  &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
+         &kp TAB      &kp Q     &kp W     &kp E      &kp R   &kp T          &none                                                                &none   &kp Y   &kp U      &kp I     &kp O     &kp P   &kp BSLH
+         &kp ESC    &lt 4 A     &kp S     &kp D      &kp F   &kp G          &none   &kp LCTRL  &kp LALT  &none  &none   &kp LGUI  &kp RCTRL      &none   &kp H   &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
+       &kp LSHFT      &kp Z     &kp X     &kp C      &kp V   &kp B          &none       &none  &kp HOME  &none  &none  &kp PG_UP      &none      &none   &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp RSHFT
+&kp LEFT_COMMAND  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BACKSPACE  &kp DELETE   &kp END                &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT      &mo 2
             >;
         };
 
@@ -77,11 +77,11 @@
 
         layer_NAV {
             bindings = <
-&trans  &trans          &trans           &trans          &trans  &trans  &trans                                                            &trans         &trans          &trans          &trans           &trans       &trans  &trans
-&trans  &trans  &macro_windows    &macro_win_up  &macro_win_max  &trans  &trans                                                            &trans    &kp PAGE_UP        &kp HOME    &kp UP_ARROW          &kp END       &trans  &trans
-&trans  &trans  &macro_win_lft  &macro_win_down   &macro_win_rt  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW       &trans  &trans
-&trans  &trans          &trans           &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans       &macro_menu  &trans  &trans    &macro_undo      &macro_cut     &macro_copy     &macro_paste  &macro_redo  &trans
-&trans  &trans          &trans           &trans          &trans          &trans  &trans  &trans                  &macro_next_wind  &trans  &trans                         &trans          &trans           &trans       &trans  &trans
+&kp  &kp             &kp              &kp             &kp  &kp  &kp                                             &kp            &kp             &kp             &kp              &kp          &kp  &kp
+&kp  &kp  &macro_windows    &macro_win_up  &macro_win_max  &kp  &kp                                             &kp    &kp PAGE_UP        &kp HOME    &kp UP_ARROW          &kp END          &kp  &kp
+&kp  &kp  &macro_win_lft  &macro_win_down   &macro_win_rt  &kp  &kp  &kp  &kp  &kp  &kp               &kp  &kp  &kp  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp  &kp
+&kp  &kp             &kp              &kp             &kp  &kp  &kp  &kp  &kp  &kp  &kp       &macro_menu  &kp  &kp    &macro_undo      &macro_cut     &macro_copy     &macro_paste  &macro_redo  &kp
+&kp  &kp             &kp              &kp             &kp       &kp  &kp  &kp            &macro_next_wind  &kp  &kp                            &kp             &kp              &kp          &kp  &kp
             >;
         };
     };
