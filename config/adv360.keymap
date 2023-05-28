@@ -38,16 +38,6 @@
                 <&none>,
                 <&kp ENTER>;
         };
-        upper_or_bs: upper_or_bs {
-            compatible = "zmk,behavior-hold-tap";
-            label = "UPPER_OR_BS";
-            bindings =
-                <&upper_cmd>,
-                <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
         dbl_up_fullscreen: dbl_up_fullscreen {
             compatible = "zmk,behavior-tap-dance";
             label = "DBL_UP_FULLSCREEN";
@@ -62,25 +52,35 @@
         compatible = "zmk,combos";
 
         menu_left {
-            bindings = <&kp LG(LC(NUMBER_1))>;
+            bindings = <&menu_bar>;
             key-positions = <73 1 43>;
             layers = <4>;
         };
 
         menu_right {
-            bindings = <&kp LG(NUMBER_1)>;
+            bindings = <&status_bar>;
             key-positions = <1 73 45>;
             layers = <4>;
         };
 
         menu_down {
-            bindings = <&kp LG(LA(NUMBER_1))>;
+            bindings = <&search_menu>;
             key-positions = <73 1 44>;
         };
 
         menu_up {
             bindings = <&none>;
             key-positions = <73 1 24>;
+        };
+
+        rearrange-left {
+            bindings = <&left_half>;
+            key-positions = <73 18 43>;
+        };
+
+        rearrange-right {
+            bindings = <&right_half>;
+            key-positions = <73 18 45>;
         };
     };
 
@@ -157,6 +157,12 @@
             #binding-cells = <0>;
             bindings = <&kp LG(RIGHT)>;
         };
+        raycast: raycast {
+            compatible = "zmk,behavior-macro";
+            label = "RAYCAST";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LA(LC(LG(R))))>;
+        };
     };
 
     keymap {
@@ -204,11 +210,11 @@
 
         layer_NAV {
             bindings = <
-         &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans         &trans          &trans          &trans           &trans  &trans  &trans
-&kp LG(LC(TAB))  &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans    &kp PAGE_UP       &kp LC(A)    &kp UP_ARROW        &kp LC(E)  &trans  &trans
-         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-      &del_word  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans     &menu_items          &trans           &trans  &trans  &trans
-         &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans                  &trans  &trans  &trans                         &trans          &trans           &trans  &trans  &trans
+     &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans         &trans          &trans          &trans           &trans  &trans  &trans
+&switch_win  &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans    &kp PAGE_UP      &line_home    &kp UP_ARROW        &line_end  &trans  &trans
+     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+  &del_word  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans    &search_menu          &trans           &trans  &trans  &trans
+     &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans                  &trans  &trans  &trans                         &trans          &trans           &trans  &trans  &trans
             >;
         };
 
