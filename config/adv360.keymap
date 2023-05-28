@@ -74,10 +74,11 @@
             layers = <4>;
         };
 
-        rearrange-left {
+        combo_rearrange-left {
             bindings = <&left_half>;
             key-positions = <73 18 43>;
             layers = <4>;
+            timeout-ms = <5000>;
         };
 
         rearrange-right {
