@@ -70,7 +70,7 @@
             key-positions = <73 1 44>;
         };
 
-        new_combo {
+        menu_up {
             bindings = <&kp LG(LS(NUMBER_1))>;
             key-positions = <73 1 24>;
         };
