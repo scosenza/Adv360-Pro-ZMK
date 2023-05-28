@@ -93,12 +93,14 @@
             bindings = <&bottom_half>;
             key-positions = <18 44>;
             layers = <4>;
+            timeout-ms = <1000>;
         };
 
         rearrange_up {
             bindings = <&tapdance_top_half_or_fullscreen>;
             key-positions = <18 23>;
             layers = <4>;
+            timeout-ms = <1000>;
         };
 
         jump_prev_word {
