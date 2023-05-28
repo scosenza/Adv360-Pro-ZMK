@@ -71,36 +71,43 @@
         menu_up {
             bindings = <&none>;
             key-positions = <73 1 24>;
+            layers = <4>;
         };
 
         rearrange-left {
             bindings = <&left_half>;
             key-positions = <73 18 43>;
+            layers = <4>;
         };
 
         rearrange-right {
             bindings = <&right_half>;
             key-positions = <73 18 45>;
+            layers = <4>;
         };
 
         rearrange_down {
             bindings = <&bottom_half>;
             key-positions = <73 18 44>;
+            layers = <4>;
         };
 
         rearrange_up {
             bindings = <&tapdance_top_half_or_fullscreen>;
             key-positions = <73 18 23>;
+            layers = <4>;
         };
 
         jump_prev_word {
             bindings = <&prev_word>;
             key-positions = <73 32 43>;
+            layers = <4>;
         };
 
         jump_next_word {
             bindings = <&next_word>;
             key-positions = <73 32 45>;
+            layers = <4>;
         };
     };
 
