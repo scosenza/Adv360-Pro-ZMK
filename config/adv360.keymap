@@ -55,24 +55,28 @@
             bindings = <&menu_bar>;
             key-positions = <1 43>;
             layers = <4>;
+            timeout-ms = <1000>;
         };
 
         menu_right {
             bindings = <&status_bar>;
             key-positions = <1 45>;
             layers = <4>;
+            timeout-ms = <1000>;
         };
 
         menu_down {
             bindings = <&search_menu>;
             key-positions = <1 44>;
             layers = <4>;
+            timeout-ms = <1000>;
         };
 
         menu_up {
             bindings = <&none>;
             key-positions = <1 24>;
             layers = <4>;
+            timeout-ms = <1000>;
         };
 
         combo_rearrange-left {
