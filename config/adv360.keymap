@@ -92,6 +92,16 @@
             bindings = <&tapdance_top_half_or_fullscreen>;
             key-positions = <73 18 23>;
         };
+
+        jump_prev_word {
+            bindings = <&prev_word>;
+            key-positions = <73 32 43>;
+        };
+
+        jump_next_word {
+            bindings = <&next_word>;
+            key-positions = <73 32 45>;
+        };
     };
 
     macros {
@@ -172,6 +182,18 @@
             label = "RAYCAST";
             #binding-cells = <0>;
             bindings = <&kp LS(LA(LC(LG(R))))>;
+        };
+        prev_word: prev_word {
+            compatible = "zmk,behavior-macro";
+            label = "PREV_WORD";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LEFT_ARROW)>;
+        };
+        next_word: next_word {
+            compatible = "zmk,behavior-macro";
+            label = "NEXT_WORD";
+            #binding-cells = <0>;
+            bindings = <&kp LA(RIGHT)>;
         };
     };
 
