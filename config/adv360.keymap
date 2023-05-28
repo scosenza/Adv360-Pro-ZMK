@@ -53,24 +53,25 @@
 
         menu_left {
             bindings = <&menu_bar>;
-            key-positions = <73 1 43>;
+            key-positions = <1 43>;
             layers = <4>;
         };
 
         menu_right {
             bindings = <&status_bar>;
-            key-positions = <1 73 45>;
+            key-positions = <1 45>;
             layers = <4>;
         };
 
         menu_down {
             bindings = <&search_menu>;
-            key-positions = <73 1 44>;
+            key-positions = <1 44>;
+            layers = <4>;
         };
 
         menu_up {
             bindings = <&none>;
-            key-positions = <73 1 24>;
+            key-positions = <1 24>;
             layers = <4>;
         };
 
@@ -78,36 +79,37 @@
             bindings = <&left_half>;
             key-positions = <18 43>;
             layers = <4>;
-            timeout-ms = <5000>;
+            timeout-ms = <1000>;
         };
 
         rearrange-right {
             bindings = <&right_half>;
-            key-positions = <73 18 45>;
+            key-positions = <18 45>;
             layers = <4>;
+            timeout-ms = <1000>;
         };
 
         rearrange_down {
             bindings = <&bottom_half>;
-            key-positions = <73 18 44>;
+            key-positions = <18 44>;
             layers = <4>;
         };
 
         rearrange_up {
             bindings = <&tapdance_top_half_or_fullscreen>;
-            key-positions = <73 18 23>;
+            key-positions = <18 23>;
             layers = <4>;
         };
 
         jump_prev_word {
             bindings = <&prev_word>;
-            key-positions = <73 32 43>;
+            key-positions = <32 43>;
             layers = <4>;
         };
 
         jump_next_word {
             bindings = <&next_word>;
-            key-positions = <73 32 45>;
+            key-positions = <32 45>;
             layers = <4>;
         };
     };
