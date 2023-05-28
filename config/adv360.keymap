@@ -54,6 +54,16 @@
             key-positions = <1 73 45>;
             layers = <4>;
         };
+
+        menu_down {
+            bindings = <&kp LG(LA(NUMBER_1))>;
+            key-positions = <73 1 44>;
+        };
+
+        new_combo {
+            bindings = <&kp LG(LS(NUMBER_1))>;
+            key-positions = <73 1 24>;
+        };
     };
 
     macros {
@@ -117,11 +127,11 @@
 
         layer_NAV {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans         &trans          &trans          &trans           &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans    &kp PAGE_UP        &kp HOME    &kp UP_ARROW          &kp END  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans          &trans          &trans           &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans                  &trans  &trans  &trans                         &trans          &trans           &trans  &trans  &trans
+         &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans         &trans          &trans          &trans           &trans  &trans  &trans
+&kp LG(LC(TAB))  &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans    &kp PAGE_UP        &kp HOME    &kp UP_ARROW          &kp END  &trans  &trans
+         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+         &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans          &trans          &trans           &trans  &trans  &trans
+         &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans                  &trans  &trans  &trans                         &trans          &trans           &trans  &trans  &trans
             >;
         };
     };
