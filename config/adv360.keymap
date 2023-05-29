@@ -101,7 +101,7 @@
         };
 
         rearrange_up {
-            bindings = <&tapdance_top_half_or_fullscreen>;
+            bindings = <&fullscreen>;
             key-positions = <18 23>;
             layers = <4>;
             timeout-ms = <1000>;
