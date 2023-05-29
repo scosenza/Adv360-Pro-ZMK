@@ -38,14 +38,6 @@
                 <&none>,
                 <&kp ENTER>;
         };
-        tapdance_top_half_or_fullscreen: tapdance_top_half_or_fullscreen {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAPDANCE_TOP_HALF_OR_FULLSCREEN";
-            #binding-cells = <0>;
-            bindings =
-                <&top_half>,
-                <&fullscreen>;
-        };
     };
 
     combos {
@@ -1582,7 +1574,7 @@ control = LC(
             >;
         };
 
-        layer_5 {
+        layer_intellij {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
