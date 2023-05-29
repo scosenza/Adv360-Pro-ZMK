@@ -38,6 +38,179 @@
                 <&none>,
                 <&kp ENTER>;
         };
+        tapdance_top_half_or_fullscreen: tapdance_top_half_or_fullscreen {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE_TOP_HALF_OR_FULLSCREEN";
+            #binding-cells = <0>;
+            bindings =
+                <&top_half>,
+                <&fullscreen>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        menu_left {
+            bindings = <&menu_bar>;
+            key-positions = <1 43>;
+            layers = <4>;
+            timeout-ms = <1000>;
+        };
+
+        menu_right {
+            bindings = <&status_bar>;
+            key-positions = <1 45>;
+            layers = <4>;
+            timeout-ms = <1000>;
+        };
+
+        menu_down {
+            bindings = <&search_menu>;
+            key-positions = <1 44>;
+            layers = <4>;
+            timeout-ms = <1000>;
+        };
+
+        menu_up {
+            bindings = <&none>;
+            key-positions = <1 24>;
+            layers = <4>;
+            timeout-ms = <1000>;
+        };
+
+        combo_rearrange-left {
+            bindings = <&left_half>;
+            key-positions = <18 43>;
+            layers = <4>;
+            timeout-ms = <1000>;
+        };
+
+        rearrange-right {
+            bindings = <&right_half>;
+            key-positions = <18 45>;
+            layers = <4>;
+            timeout-ms = <1000>;
+        };
+
+        rearrange_down {
+            bindings = <&bottom_half>;
+            key-positions = <18 44>;
+            layers = <4>;
+            timeout-ms = <1000>;
+        };
+
+        rearrange_up {
+            bindings = <&tapdance_top_half_or_fullscreen>;
+            key-positions = <18 23>;
+            layers = <4>;
+            timeout-ms = <1000>;
+        };
+
+        jump_prev_word {
+            bindings = <&prev_word>;
+            key-positions = <32 43>;
+            layers = <4>;
+        };
+
+        jump_next_word {
+            bindings = <&next_word>;
+            key-positions = <32 45>;
+            layers = <4>;
+        };
+    };
+
+    macros {
+        fullscreen: fullscreen {
+            compatible = "zmk,behavior-macro";
+            label = "FULLSCREEN";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LC(LA(LS(M))))>;
+        };
+        top_half: top_half {
+            compatible = "zmk,behavior-macro";
+            label = "TOP_HALF";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LS(R))>;
+        };
+        bottom_half: bottom_half {
+            compatible = "zmk,behavior-macro";
+            label = "BOTTOM_HALF";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LA(R))>;
+        };
+        left_half: left_half {
+            compatible = "zmk,behavior-macro";
+            label = "LEFT_HALF";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LS(LC(R)))>;
+        };
+        right_half: right_half {
+            compatible = "zmk,behavior-macro";
+            label = "RIGHT_HALF";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LC(R))>;
+        };
+        menu_bar: menu_bar {
+            compatible = "zmk,behavior-macro";
+            label = "MENU_BAR";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LC(NUMBER_1))>;
+        };
+        status_bar: status_bar {
+            compatible = "zmk,behavior-macro";
+            label = "STATUS_BAR";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LC(NUMBER_2))>;
+        };
+        switch_win: switch_win {
+            compatible = "zmk,behavior-macro";
+            label = "SWITCH_WIN";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LC(TAB))>;
+        };
+        search_menu: search_menu {
+            compatible = "zmk,behavior-macro";
+            label = "SEARCH_MENU";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LA(NUMBER_1))>;
+        };
+        del_word: del_word {
+            compatible = "zmk,behavior-macro";
+            label = "DEL_WORD";
+            #binding-cells = <0>;
+            bindings = <&kp LA(DELETE)>;
+        };
+        line_home: line_home {
+            compatible = "zmk,behavior-macro";
+            label = "LINE_HOME";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LEFT_ARROW)>;
+        };
+        line_end: line_end {
+            compatible = "zmk,behavior-macro";
+            label = "LINE_END";
+            #binding-cells = <0>;
+            bindings = <&kp LG(RIGHT)>;
+        };
+        raycast: raycast {
+            compatible = "zmk,behavior-macro";
+            label = "RAYCAST";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LA(LC(LG(R))))>;
+        };
+        prev_word: prev_word {
+            compatible = "zmk,behavior-macro";
+            label = "PREV_WORD";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LEFT_ARROW)>;
+        };
+        next_word: next_word {
+            compatible = "zmk,behavior-macro";
+            label = "NEXT_WORD";
+            #binding-cells = <0>;
+            bindings = <&kp LA(RIGHT)>;
+        };
     };
 
     keymap {
@@ -45,11 +218,11 @@
 
         default_layer {
             bindings = <
-&kp EQUAL     &kp N1    &kp N2    &kp N3     &kp N4  &kp N5           &tog 1                                                                                 &mo 3  &kp N6  &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
-  &kp TAB      &kp Q     &kp W     &kp E      &kp R   &kp T            &none                                                                                 &none   &kp Y   &kp U      &kp I     &kp O     &kp P   &kp BSLH
-  &kp ESC      &kp A     &kp S     &kp D      &kp F   &kp G            &none                &kp LCTRL  &kp LALT  &none  &none   &kp LGUI      &kp RCTRL      &none   &kp H   &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
-&kp LSHFT      &kp Z     &kp X     &kp C      &kp V   &kp B            &none                    &none  &kp HOME  &none  &none  &kp PG_UP          &none      &none   &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp ENTER
-    &mo 1  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &lt 4 BACKSPACE  &mt LEFT_COMMAND DELETE   &kp END                &kp PG_DN  &double_enter  &kp SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT      &mo 2
+              &kp EQUAL     &kp N1    &kp N2    &kp N3     &kp N4  &kp N5           &tog 1                                                                                 &mo 3  &kp N6  &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
+                &kp TAB      &kp Q     &kp W     &kp E      &kp R   &kp T            &none                                                                                 &none   &kp Y   &kp U      &kp I     &kp O     &kp P   &kp BSLH
+&mt LEFT_CONTROL ESCAPE      &kp A     &kp S     &kp D      &kp F   &kp G            &none                &kp LCTRL  &kp LALT  &none  &none   &kp LGUI      &kp RCTRL      &none   &kp H   &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
+              &kp LSHFT      &kp Z     &kp X     &kp C      &kp V   &kp B            &none                    &none  &kp HOME  &none  &none  &kp PG_UP          &none      &none   &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp ENTER
+                  &mo 1  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &lt 4 BACKSPACE  &mt LEFT_COMMAND DELETE   &kp END                &kp PG_DN  &double_enter  &kp SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT      &mo 2
             >;
         };
 
@@ -85,11 +258,21 @@
 
         layer_NAV {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans            &trans                                                  &trans         &trans          &trans          &trans           &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans                                                  &trans    &kp PAGE_UP        &kp HOME    &kp UP_ARROW          &kp END     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &kp LG(Z)       &kp LG(X)       &kp LG(C)        &kp LG(V)  &kp LG(Y)  &trans
-&trans  &trans  &trans  &trans  &trans          &kp LEFT_COMMAND  &trans  &trans                  &trans  &trans  &trans                         &trans          &trans           &trans     &trans  &trans
+   &raycast  &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans         &trans          &trans          &trans           &trans  &trans  &trans
+&switch_win  &trans  &trans  &trans   &none  &trans  &trans                                                  &trans    &kp PAGE_UP      &line_home    &kp UP_ARROW        &line_end  &trans  &trans
+     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
+  &del_word  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans    &search_menu          &trans           &trans  &trans  &trans
+     &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans                  &trans  &trans  &trans                         &trans          &trans           &trans  &trans  &trans
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
