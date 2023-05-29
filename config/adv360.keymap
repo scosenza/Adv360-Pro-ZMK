@@ -48,6 +48,36 @@
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
         };
+        right_arrow_no_cmd: right_arrow_no_cmd {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RIGHT_ARROW_NO_CMD";
+            bindings =
+                <&kp RIGHT_ARROW>,
+                <&kp RIGHT_ARROW>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+        };
+        up_arrow_no_cmd: up_arrow_no_cmd {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UP_ARROW_NO_CMD";
+            bindings =
+                <&kp UP_ARROW>,
+                <&kp UP_ARROW>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+        };
+        down_arrow_no_cmd: down_arrow_no_cmd {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOWN_ARROW_NO_CMD";
+            bindings =
+                <&kp DOWN_ARROW>,
+                <&kp DOWN_ARROW>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+        };
     };
 
     macros {
@@ -262,11 +292,11 @@
 
         layer_raise {
             bindings = <
-   &raycast   &none        &trans  &trans  &trans     &trans  &trans                                                  &trans         &trans              &trans          &trans           &trans  &trans  &trans
-&switch_win  &trans        &trans  &trans   &none      &none  &trans                                                  &trans    &kp PAGE_UP          &line_home    &kp UP_ARROW        &line_end  &trans  &trans
-     &trans  &trans  &ij_switcher  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &left_arrow_no_cmd  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-     &trans  &trans        &trans  &trans  &trans  &kp LG(Y)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans        &search_menu          &trans           &trans  &trans  &trans
-     &trans  &trans        &trans  &trans  &trans              &none  &trans  &trans                  &trans  &trans  &trans                             &trans          &trans           &trans  &trans  &trans
+   &raycast   &none        &trans  &trans  &trans     &trans  &trans                                                  &trans         &trans              &trans                 &trans                  &trans  &trans  &trans
+&switch_win  &trans        &trans  &trans   &none      &none  &trans                                                  &trans    &kp PAGE_UP          &line_home    &kp up_arrow_no_cmd               &line_end  &trans  &trans
+     &trans  &trans  &ij_switcher  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &left_arrow_no_cmd  &kp down_arrow_no_cmd  &kp right_arrow_no_cmd  &trans  &trans
+     &trans  &trans        &trans  &trans  &trans  &kp LG(Y)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans        &search_menu                 &trans                  &trans  &trans  &trans
+     &trans  &trans        &trans  &trans  &trans              &none  &trans  &trans                  &trans  &trans  &trans                             &trans                 &trans                  &trans  &trans  &trans
             >;
         };
 
