@@ -1,1 +1,6 @@
 /firmware/*.uf2
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/Adv360-Pro-ZMK.iml
+/.idea/workspace.xml
