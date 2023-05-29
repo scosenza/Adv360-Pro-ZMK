@@ -78,6 +78,16 @@
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
         };
+        ctrl_c_no_other: ctrl_c_no_other {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_C_NO_OTHER";
+            bindings =
+                <&kp LC(C)>,
+                <&kp LC(C)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LGUI)>;
+        };
     };
 
     macros {
@@ -90,7 +100,7 @@
                 <&mo 4 &kp LEFT_COMMAND>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 4 &kp LEFT_COMMAND>;
+                <&lt 4 BACKSPACE &kp LEFT_COMMAND>;
 
             wait-ms = <0>;
         };
@@ -103,7 +113,7 @@
                 <&mo 5 &kp LEFT_COMMAND &kp LEFT_CONTROL>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 5 &kp LEFT_COMMAND &kp LEFT_CONTROL>;
+                <&lt 5 DELETE &kp LEFT_COMMAND &kp LEFT_CONTROL>;
 
             wait-ms = <0>;
         };
@@ -292,21 +302,21 @@
 
         layer_raise {
             bindings = <
-   &raycast   &none        &trans  &trans  &trans     &trans  &trans                                                  &trans         &trans              &trans                 &trans                  &trans  &trans  &trans
-&switch_win  &trans        &trans  &trans   &none      &none  &trans                                                  &trans    &kp PAGE_UP          &line_home    &kp up_arrow_no_cmd               &line_end  &trans  &trans
-     &trans  &trans  &ij_switcher  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &left_arrow_no_cmd  &kp down_arrow_no_cmd  &kp right_arrow_no_cmd  &trans  &trans
-     &trans  &trans        &trans  &trans  &trans  &kp LG(Y)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans        &search_menu                 &trans                  &trans  &trans  &trans
-     &trans  &trans        &trans  &trans  &trans              &none  &trans  &trans                  &trans  &trans  &trans                             &trans                 &trans                  &trans  &trans  &trans
+   &raycast   &none        &trans  &trans  &trans     &trans  &trans                                                  &trans         &trans              &trans              &trans               &trans  &trans  &trans
+&switch_win  &trans        &trans  &trans   &none      &none  &trans                                                  &trans    &kp PAGE_UP          &line_home    &up_arrow_no_cmd            &line_end  &trans  &trans
+     &trans  &trans  &ij_switcher  &trans  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &left_arrow_no_cmd  &down_arrow_no_cmd  &right_arrow_no_cmd  &trans  &trans
+     &trans  &trans        &trans  &trans  &trans  &kp LG(Y)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans        &search_menu              &trans               &trans  &trans  &trans
+     &trans  &trans        &trans  &trans  &trans              &none  &trans  &trans                  &trans  &trans  &trans                             &trans              &trans               &trans  &trans  &trans
             >;
         };
 
         layer_lower {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans   &none  &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans            &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans            &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &ctrl_c_no_other  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans            &trans  &trans          &trans   &none  &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
