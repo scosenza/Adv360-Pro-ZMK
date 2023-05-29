@@ -1,0 +1,4 @@
+meta = LG
+shift = LS
+alt = LA
+control = LC
