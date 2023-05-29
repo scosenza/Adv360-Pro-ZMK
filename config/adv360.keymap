@@ -211,6 +211,13 @@
             #binding-cells = <0>;
             bindings = <&kp LA(RIGHT)>;
         };
+        ij_actions: ij_actions {
+            compatible = "zmk,behavior-macro";
+            label = "IJ_ACTIONS";
+            #binding-cells = <0>;
+            bindings = <&kp LC(A)>;
+        };
+        ij_
     };
 
     keymap {
