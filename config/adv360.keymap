@@ -107,7 +107,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 4 &kp LEFT_COMMAND>,
+                <&lt 4 BACKSPACE &kp LEFT_COMMAND>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&lt 4 BACKSPACE &kp LEFT_COMMAND>;
@@ -120,7 +120,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 5 &kp LEFT_COMMAND &kp LEFT_CONTROL>,
+                <&lt 5 DELETE &kp LEFT_COMMAND &kp LEFT_CONTROL>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&lt 5 DELETE &kp LEFT_COMMAND &kp LEFT_CONTROL>;
