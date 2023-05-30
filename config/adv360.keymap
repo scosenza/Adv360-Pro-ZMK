@@ -98,6 +98,16 @@
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
         };
+        ctrl_only_raise_morph: ctrl_only_raise_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_ONLY_RAISE_MORPH";
+            bindings =
+                <&kp LEFT_CONTROL>,
+                <&kp LEFT_CONTROL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+        };
     };
 
     macros {
@@ -312,11 +322,11 @@
 
         layer_raise {
             bindings = <
-   &raycast   &none        &trans                    &trans  &trans        &trans  &trans                                                  &trans         &trans              &trans              &trans               &trans  &trans  &trans
-&switch_win  &trans        &trans                    &trans   &none  &kp LEFT_ALT  &trans                                                  &trans    &kp PAGE_UP          &line_home    &up_arrow_no_cmd            &line_end  &trans  &trans
-     &trans  &trans  &ij_switcher  &option_only_raise_morph  &trans        &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &left_arrow_no_cmd  &down_arrow_no_cmd  &right_arrow_no_cmd  &trans  &trans
-     &trans  &trans        &trans                    &trans  &trans     &kp LG(Y)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans        &search_menu              &trans               &trans  &trans  &trans
-     &trans  &trans        &trans                    &trans  &trans                 &none  &trans  &trans                  &trans  &trans  &trans                             &trans              &trans               &trans  &trans  &trans
+   &raycast   &none        &trans                    &trans  &trans                  &trans  &trans                                                  &trans         &trans              &trans              &trans               &trans  &trans  &trans
+&switch_win  &trans        &trans                    &trans   &none  &ctrl_only_raise_morph  &trans                                                  &trans    &kp PAGE_UP          &line_home    &up_arrow_no_cmd            &line_end  &trans  &trans
+     &trans  &trans  &ij_switcher  &option_only_raise_morph  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &left_arrow_no_cmd  &down_arrow_no_cmd  &right_arrow_no_cmd  &trans  &trans
+     &trans  &trans        &trans                    &trans  &trans               &kp LG(Y)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans        &search_menu              &trans               &trans  &trans  &trans
+     &trans  &trans        &trans                    &trans  &trans                           &none  &trans  &trans                  &trans  &trans  &trans                             &trans              &trans               &trans  &trans  &trans
             >;
         };
 
