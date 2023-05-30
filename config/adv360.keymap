@@ -131,8 +131,6 @@
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&lt 4 BACKSPACE &kp LEFT_COMMAND>;
-
-            wait-ms = <200>;
         };
         lower_with_cmd_ctrl: lower_with_cmd_ctrl {
             compatible = "zmk,behavior-macro";
@@ -144,8 +142,6 @@
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&lt 5 DELETE &kp LEFT_COMMAND &kp LEFT_CONTROL>;
-
-            wait-ms = <200>;
         };
         del_word: del_word {
             compatible = "zmk,behavior-macro";
