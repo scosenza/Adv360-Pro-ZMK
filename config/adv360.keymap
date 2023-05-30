@@ -108,6 +108,16 @@
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
         };
+        cmd_tab_lower_morph: cmd_tab_lower_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CMD_TAB_LOWER_MORPH";
+            bindings =
+                <&kp LG(TAB)>,
+                <&kp TAB>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -136,60 +146,6 @@
                 <&lt 5 DELETE &kp LEFT_COMMAND &kp LEFT_CONTROL>;
 
             wait-ms = <0>;
-        };
-        fullscreen: fullscreen {
-            compatible = "zmk,behavior-macro";
-            label = "FULLSCREEN";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LC(LA(LS(M))))>;
-        };
-        top_half: top_half {
-            compatible = "zmk,behavior-macro";
-            label = "TOP_HALF";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LS(R))>;
-        };
-        bottom_half: bottom_half {
-            compatible = "zmk,behavior-macro";
-            label = "BOTTOM_HALF";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LA(R))>;
-        };
-        left_half: left_half {
-            compatible = "zmk,behavior-macro";
-            label = "LEFT_HALF";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LS(LC(R)))>;
-        };
-        right_half: right_half {
-            compatible = "zmk,behavior-macro";
-            label = "RIGHT_HALF";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LC(R))>;
-        };
-        menu_bar: menu_bar {
-            compatible = "zmk,behavior-macro";
-            label = "MENU_BAR";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LC(NUMBER_1))>;
-        };
-        status_bar: status_bar {
-            compatible = "zmk,behavior-macro";
-            label = "STATUS_BAR";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LC(NUMBER_2))>;
-        };
-        switch_win: switch_win {
-            compatible = "zmk,behavior-macro";
-            label = "SWITCH_WIN";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LC(TAB))>;
-        };
-        search_menu: search_menu {
-            compatible = "zmk,behavior-macro";
-            label = "SEARCH_MENU";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LA(NUMBER_1))>;
         };
         del_word: del_word {
             compatible = "zmk,behavior-macro";
@@ -227,54 +183,6 @@
             #binding-cells = <0>;
             bindings = <&kp LA(RIGHT)>;
         };
-        ij_goto_action: goto_action {
-            compatible = "zmk,behavior-macro";
-            label = "GOTO_ACTION";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LS(A))>;
-        };
-        ij_rerun_tests: rerun_tests {
-            compatible = "zmk,behavior-macro";
-            label = "RERUN_TESTS";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LG(R))>;
-        };
-        ij_goto_test: goto_test {
-            compatible = "zmk,behavior-macro";
-            label = "GOTO_TEST";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LS(T))>;
-        };
-        ij_switcher: switcher {
-            compatible = "zmk,behavior-macro";
-            label = "SWITCHER";
-            #binding-cells = <0>;
-            bindings = <&kp LC(TAB)>;
-        };
-        ij_goto_symbol: goto_symbol {
-            compatible = "zmk,behavior-macro";
-            label = "GOTO_SYMBOL";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LA(O))>;
-        };
-        ij_next_tab: next_tab {
-            compatible = "zmk,behavior-macro";
-            label = "NEXT_TAB";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LA(RIGHT_ARROW))>;
-        };
-        ij_prev_tab: prev_tab {
-            compatible = "zmk,behavior-macro";
-            label = "PREV_TAB";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LA(LEFT_ARROW))>;
-        };
-        ij_show_usages: show_usages {
-            compatible = "zmk,behavior-macro";
-            label = "SHOW_USAGES";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LA(U))>;
-        };
     };
 
     keymap {
@@ -282,11 +190,11 @@
 
         default_layer {
             bindings = <
- &kp EQUAL     &kp N1    &kp N2    &kp N3     &kp N4  &kp N5           &tog 1                                                                          &mo 3  &kp N6  &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
-   &kp TAB      &kp Q     &kp W     &kp E      &kp R   &kp T            &none                                                                          &none   &kp Y   &kp U      &kp I     &kp O     &kp P   &kp BSLH
-&kp ESCAPE      &kp A     &kp S     &kp D      &kp F   &kp G            &none             &kp LCTRL  &kp LALT  &none  &none   &kp LGUI  &kp RCTRL      &none   &kp H   &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
- &kp LSHFT      &kp Z     &kp X     &kp C      &kp V   &kp B            &none                 &none  &kp HOME  &none  &none  &kp PG_UP      &none      &none   &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp ENTER
-     &mo 1  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &raise_with_cmd  &lower_with_cmd_ctrl   &kp END                &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT      &mo 2
+ &kp EQUAL     &kp N1    &kp N2    &kp N3     &kp N4  &kp N5            &tog 1                                                                          &mo 3  &kp N6  &kp N7     &kp N8    &kp N9    &kp N0  &kp MINUS
+   &kp TAB      &kp Q     &kp W     &kp E      &kp R   &kp T  &kp LG(NUMBER_8)                                                                          &none   &kp Y   &kp U      &kp I     &kp O     &kp P   &kp BSLH
+&kp ESCAPE      &kp A     &kp S     &kp D      &kp F   &kp G  &kp LG(NUMBER_9)             &kp LCTRL  &kp LALT  &none  &none   &kp LGUI  &kp RCTRL      &none   &kp H   &kp J      &kp K     &kp L  &kp SEMI    &kp SQT
+ &kp LSHFT      &kp Z     &kp X     &kp C      &kp V   &kp B             &none                 &none  &kp HOME  &none  &none  &kp PG_UP      &none      &none   &kp N   &kp M  &kp COMMA   &kp DOT  &kp FSLH  &kp ENTER
+     &mo 1  &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT           &raise_with_cmd  &lower_with_cmd_ctrl   &kp END                &kp PG_DN  &kp ENTER  &kp SPACE          &kp UP   &kp DOWN  &kp LBKT  &kp RBKT      &mo 2
             >;
         };
 
@@ -322,21 +230,21 @@
 
         layer_raise {
             bindings = <
-   &raycast   &none        &trans                    &trans  &trans                  &trans  &trans                                                  &trans         &trans              &trans              &trans               &trans  &trans  &trans
-&switch_win  &trans        &trans                    &trans   &none  &ctrl_only_raise_morph  &trans                                                  &trans    &kp PAGE_UP          &line_home    &up_arrow_no_cmd            &line_end  &trans  &trans
-     &trans  &trans  &ij_switcher  &option_only_raise_morph  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &left_arrow_no_cmd  &down_arrow_no_cmd  &right_arrow_no_cmd  &trans  &trans
-     &trans  &trans        &trans                    &trans  &trans               &kp LG(Y)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans        &search_menu              &trans               &trans  &trans  &trans
-     &trans  &trans        &trans                    &trans  &trans                           &none  &trans  &trans                  &trans  &trans  &trans                             &trans              &trans               &trans  &trans  &trans
+           &raycast   &none  &trans                    &trans  &trans                  &trans  &trans                                                  &trans         &trans              &trans              &trans               &trans  &trans  &trans
+&kp LG(LC(LA(TAB)))  &trans  &trans                    &trans   &none  &ctrl_only_raise_morph  &trans                                                  &trans    &kp PAGE_UP          &line_home    &up_arrow_no_cmd            &line_end  &trans  &trans
+             &trans  &trans  &trans  &option_only_raise_morph  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &left_arrow_no_cmd  &down_arrow_no_cmd  &right_arrow_no_cmd  &trans  &trans
+             &trans  &trans  &trans                    &trans  &trans               &kp LG(Y)  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans       &kp LG(LA(M))              &trans               &trans  &trans  &trans
+             &trans  &trans  &trans                    &trans  &trans                           &none   &none  &trans                  &trans  &trans  &trans                             &trans              &trans               &trans  &trans  &trans
             >;
         };
 
         layer_lower {
             bindings = <
-&trans  &trans  &trans            &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans            &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &ctrl_c_no_other  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans            &trans  &trans          &trans   &none  &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+              &trans  &trans  &trans            &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&cmd_tab_lower_morph  &trans  &trans            &trans  &trans  &trans  &trans                                                  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+              &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+              &trans  &trans  &trans  &ctrl_c_no_other  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+              &trans  &trans  &trans            &trans  &trans           &none   &none  &trans                  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
