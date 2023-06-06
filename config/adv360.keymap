@@ -257,7 +257,7 @@
 &raycast   &none  &trans                    &trans  &trans                  &trans  &trans                                                  &trans         &trans              &trans              &trans               &trans  &trans  &trans
   &trans  &trans  &trans                    &trans   &none  &ctrl_only_raise_morph  &trans                                                  &trans      &kp PG_UP          &line_home    &up_arrow_no_cmd            &line_end  &trans  &trans
   &trans  &trans  &trans  &option_only_raise_morph  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp PAGE_DOWN  &left_arrow_no_cmd  &down_arrow_no_cmd  &right_arrow_no_cmd  &trans  &trans
-  &trans  &trans  &trans                    &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans       &kp LG(LA(M))              &trans               &trans  &trans  &trans
+  &trans  &trans  &trans                    &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans         &trans              &trans              &trans               &trans  &trans  &trans
   &trans  &trans  &trans                    &trans  &trans                           &none   &none  &trans                  &trans  &trans  &trans                             &trans              &trans               &trans  &trans  &trans
             >;
         };
